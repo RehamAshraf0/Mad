@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;800&display=swap");
+@font-face {
+  font-family: "GalleryModern";
+  src: url(../css/GalleryModern.otf); }
+
+@font-face {
+  font-family: "Stratum";
+  src: url(../css/Stratum1-Regular.otf); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 1100px) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (max-width: 300px) {
+    html {
+      font-size: 30%; } }
+
+body {
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: "GalleryModern"; }
+
+.header {
+  background-image: linear-gradient(to bottom, #5e5e5e, black);
+  min-height: 100vh;
+  padding: 0rem 10rem; }
+  .header__header {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem; }
+    @media only screen and (max-width: 600px) {
+      .header__header {
+        justify-content: center; } }
+  .header__logo {
+    width: 8%; }
+    @media only screen and (max-width: 600px) {
+      .header__logo {
+        display: none; } }
+  .header__text {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 200;
+    font-size: 1.2rem; }
+  .header__icon {
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-size: 1.6rem; }
+    @media only screen and (max-width: 600px) {
+      .header__icon {
+        display: none; } }
+    .header__icon:hover {
+      color: #979595; }
+  .header__main {
+    display: grid;
+    justify-items: center;
+    justify-content: center; }
+  .header__img {
+    width: 10%;
+    animation: toRight 1s backwards;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 1200px) {
+      .header__img {
+        width: 15%; } }
+    @media only screen and (max-width: 600px) {
+      .header__img {
+        width: 25%; } }
+
+.heading-2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 1.4rem;
+  animation: toRight 1s backwards; }
+
+.heading-1 {
+  font-family: "GalleryModern";
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 7rem;
+  font-weight: 300;
+  animation: toRight 1s backwards; }
+  @media only screen and (max-width: 500px) {
+    .heading-1 {
+      font-size: 6rem; } }
+  @media only screen and (max-width: 400px) {
+    .heading-1 {
+      font-size: 5rem; } }
+
+.btn {
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: #d82929;
+  color: white;
+  padding: 2rem 10rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+  animation: toRight 1s backwards; }
+  @media only screen and (max-width: 300px) {
+    .btn {
+      padding: 2rem 10rem; } }
+  .btn:hover {
+    background-color: #b11e1e; }
+    .btn:hover::before {
+      transform: scale(1.4);
+      opacity: 0; }
+  .btn::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #b11e1e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10rem;
+    transition: all 0.4s ease;
+    z-index: -1; }
+
+.gallery {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  @media only screen and (max-width: 850px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); } }
+  .gallery__img {
+    margin: 2rem;
+    border-radius: 0.3rem;
+    transition: all 0.4s ease;
+    width: 70%; }
+    @media only screen and (max-width: 850px) {
+      .gallery__img {
+        margin: 1rem; } }
+    @media only screen and (max-width: 400px) {
+      .gallery__img {
+        width: 60%;
+        margin: 0; } }
+    .gallery__img--down {
+      transform: translateY(2rem); }
+    .gallery__img:hover {
+      transform: scale(1.1); }
+  .gallery__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .gallery__text {
+    border-left: 0.1rem solid #b11e1e;
+    padding: 4rem;
+    padding-bottom: 0;
+    margin: 4rem;
+    transform: translateY(-7rem); }
+    @media only screen and (max-width: 400px) {
+      .gallery__text {
+        margin: 2rem;
+        margin-top: 4rem; } }
+
+::selection {
+  background-color: #b11e1e;
+  color: white; }
+
+@keyframes toRight {
+  0% {
+    transform: translateX(-15rem); }
+  100% {
+    transform: translateX(0); } }
